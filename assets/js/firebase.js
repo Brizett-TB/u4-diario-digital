@@ -19,12 +19,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBdD3Glr5jEhMaE5bwf4DkjA49LnizOL4I",
-  authDomain: "diario-digital-b5eaa.firebaseapp.com",
-  projectId: "diario-digital-b5eaa",
-  storageBucket: "diario-digital-b5eaa.appspot.com",
-  messagingSenderId: "175265304764",
-  appId: "1:175265304764:web:bd129614364c93ef4680b9",
+  apiKey: "AIzaSyBJ94IYfI7xsk8zAcIRlrsazKBjDjaY93w",
+  authDomain: "diario-digital-55590.firebaseapp.com",
+  projectId: "diario-digital-55590",
+  storageBucket: "diario-digital-55590.appspot.com",
+  messagingSenderId: "719722350832",
+  appId: "1:719722350832:web:1cb6202288d28dd52f5a35"
 };
 
 // Initialize Firebase
@@ -35,8 +35,8 @@ export const auth = getAuth(app);
 export const db = getFirestore();
 
 // Operaciones CRUD
-export const createTask = (title, description) =>
-  addDoc(collection(db, "tasks"), { title, description });
+export const createTask = (title, description, userName, userImage) =>
+  addDoc(collection(db, "tasks"), { title, description, userName, userImage });
 
 export const onGetTask = (callback) =>
   onSnapshot(collection(db, "tasks"), callback);
